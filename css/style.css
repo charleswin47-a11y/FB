@@ -268,28 +268,16 @@ h1, h2, h3, h4, .serif-font {
 .main-navigation {
   display: flex;
   align-items: center;
+  gap: 32px;
 }
 
-.drawer-links-group {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.drawer-links-group .nav-link {
-  display: inline-flex;
-  align-items: center;
+.nav-link {
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-navy);
   position: relative;
   padding: 6px 0;
   white-space: nowrap;
-}
-
-/* Hide SVG icons in desktop navbar to keep it sleek, clean and editorial */
-.drawer-links-group .nav-link svg {
-  display: none;
 }
 
 .nav-link::after {
@@ -1951,160 +1939,37 @@ body.drawer-locked {
   /* Luxury Off-Canvas Drawer */
   .main-navigation {
     position: fixed;
-    top: 0;
+    top: 70px;
+    left: 0;
     right: 0;
-    bottom: 0;
-    width: 86%;
-    max-width: 360px;
-    height: 100vh;
-    height: 100dvh;
-    background: linear-gradient(180deg, #091C2E 0%, #102D46 100%);
-    z-index: 1000;
-    display: flex;
+    background: var(--color-pure-white);
     flex-direction: column;
-    padding: 24px 20px max(24px, env(safe-area-inset-bottom, 24px));
-    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.55);
-    border-left: 1px solid rgba(226, 197, 197, 0.3);
-    transform: translateX(105%);
-    opacity: 1;
-    pointer-events: auto;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    padding: 28px 24px;
+    gap: 16px;
+    box-shadow: var(--shadow-card);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-normal);
+    border-bottom: 1px solid var(--color-blush-border);
+    z-index: 999;
   }
 
   .main-navigation.open {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  .mobile-drawer-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(226, 197, 197, 0.2);
-    margin-bottom: 24px;
-  }
-
-  .drawer-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .drawer-logo-img {
-    height: 40px;
-    width: auto;
-  }
-
-  .drawer-brand-title {
-    display: block;
-    font-family: var(--font-serif);
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: var(--color-blush-soft);
-    letter-spacing: 0.08em;
-  }
-
-  .drawer-brand-sub {
-    display: block;
-    font-size: 0.6875rem;
-    color: var(--color-champagne);
-    letter-spacing: 0.05em;
-  }
-
-  .drawer-close-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(226, 197, 197, 0.12);
-    border: 1px solid rgba(226, 197, 197, 0.3);
-    color: var(--color-blush);
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all var(--transition-fast);
-  }
-
-  .drawer-close-btn:hover {
-    background: rgba(226, 197, 197, 0.25);
-    color: var(--color-pure-white);
-  }
-
-  .drawer-links-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex-grow: 1;
-  }
-
-  .drawer-links-group .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-    border-radius: var(--radius-sm);
-    color: var(--color-pure-white);
-    font-size: 0.9375rem;
+  .main-navigation .nav-link {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 0.03em;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid transparent;
-    transition: all var(--transition-fast);
+    color: var(--color-navy);
+    border-bottom: 1px solid rgba(16, 45, 70, 0.06);
   }
 
-  .drawer-links-group .nav-link svg {
-    color: var(--color-champagne);
-    flex-shrink: 0;
-  }
-
-  .drawer-links-group .nav-link:hover,
-  .drawer-links-group .nav-link.active {
-    background: rgba(226, 197, 197, 0.12);
-    border-color: rgba(226, 197, 197, 0.3);
-    color: var(--color-blush-soft);
-  }
-
-  .drawer-links-group .nav-link::after {
-    display: none;
-  }
-
-  /* Drawer Emergency Contact Card */
-  .drawer-contact-card {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background: rgba(8, 25, 40, 0.85);
-    border: 1px solid rgba(226, 197, 197, 0.25);
-    border-radius: var(--radius-md);
-    padding: 18px 16px;
-    margin-top: 24px;
-  }
-
-  .drawer-contact-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--color-blush-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
-  .drawer-call-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--color-champagne-light);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    padding: 6px;
-    text-align: center;
-  }
 
   /* Mobile App Bottom Action Dock */
   .mobile-bottom-dock {

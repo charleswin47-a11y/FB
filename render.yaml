@@ -1,6 +1,10 @@
 services:
   - type: web
-    name: dra-fabiana-barbosa
-    env: static
-    buildCommand: ""
-    staticPublishPath: .
+    name: fb
+    runtime: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: PORT
+        value: 10000
