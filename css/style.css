@@ -268,15 +268,28 @@ h1, h2, h3, h4, .serif-font {
 .main-navigation {
   display: flex;
   align-items: center;
-  gap: 32px;
 }
 
-.nav-link {
+.drawer-links-group {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.drawer-links-group .nav-link {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-navy);
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
+}
+
+/* Hide SVG icons in desktop navbar to keep it sleek, clean and editorial */
+.drawer-links-group .nav-link svg {
+  display: none;
 }
 
 .nav-link::after {
