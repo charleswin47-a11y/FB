@@ -1,0 +1,17 @@
+{
+  "name": "dra-fabiana-barbosa-advocacia",
+  "version": "1.0.0",
+  "description": "Website Institucional da Dra. Fabiana Barbosa - Advocacia Estratégica e Gestão de Crises",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "advocacia",
+    "direito-penal",
+    "compliance",
+    "rio-de-janeiro"
+  ],
+  "author": "Dra. Fabiana Barbosa",
+  "license": "ISC"
+}

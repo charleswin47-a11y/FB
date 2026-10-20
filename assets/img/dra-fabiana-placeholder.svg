@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102D46" />
+      <stop offset="60%" stop-color="#0B2032" />
+      <stop offset="100%" stop-color="#06121C" />
+    </linearGradient>
+    <linearGradient id="roseGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2C5C5" />
+      <stop offset="50%" stop-color="#D5B18D" />
+      <stop offset="100%" stop-color="#E2C5C5" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#E2C5C5" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#E2C5C5" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#666787" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#102D46" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="subtleGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E2C5C5" stroke-width="0.5" stroke-opacity="0.07" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1000" fill="url(#bgGrad)" />
+  <rect width="800" height="1000" fill="url(#centerGlow)" />
+  <rect width="800" height="1000" fill="url(#subtleGrid)" />
+
+  <!-- Outer Architectural Border -->
+  <rect x="30" y="30" width="740" height="940" fill="none" stroke="#E2C5C5" stroke-width="1.2" stroke-opacity="0.25" rx="8" />
+  <rect x="42" y="42" width="716" height="916" fill="none" stroke="#D5B18D" stroke-width="0.8" stroke-opacity="0.2" rx="4" />
+
+  <!-- Decorative Corner Accents -->
+  <path d="M 24 45 L 45 45 L 45 24" fill="none" stroke="url(#roseGoldGrad)" stroke-width="2.5" />
+  <path d="M 776 45 L 755 45 L 755 24" fill="none" stroke="url(#roseGoldGrad)" stroke-width="2.5" />
+  <path d="M 24 955 L 45 955 L 45 976" fill="none" stroke="url(#roseGoldGrad)" stroke-width="2.5" />
+  <path d="M 776 955 L 755 955 L 755 976" fill="none" stroke="url(#roseGoldGrad)" stroke-width="2.5" />
+
+  <!-- Center Crest Composition -->
+  <g transform="translate(400, 380)">
+    <!-- Aura Rings -->
+    <circle r="180" fill="none" stroke="#E2C5C5" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="4 6" />
+    <circle r="150" fill="none" stroke="#D5B18D" stroke-width="1.5" stroke-opacity="0.2" />
+    <circle r="120" fill="#102D46" stroke="#E2C5C5" stroke-width="1" stroke-opacity="0.3" />
+
+    <!-- Stylized Monogram FB & Balança -->
+    <!-- Letter B -->
+    <text x="0" y="55" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', serif" font-size="160" font-weight="600" fill="#E2C5C5" text-anchor="middle" letter-spacing="0.05em">B</text>
+    
+    <!-- Balance & F flourish overlay -->
+    <path d="M -90 -10 Q -40 20 0 -30 Q 30 -70 50 -10 Q 70 30 100 20" fill="none" stroke="#102D46" stroke-width="6" stroke-linecap="round" />
+    <path d="M -90 -10 Q -40 20 0 -30 Q 30 -70 50 -10 Q 70 30 100 20" fill="none" stroke="#D5B18D" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Scales pans -->
+    <path d="M -95 -8 Q -80 14 -65 -8 Z" fill="#D5B18D" opacity="0.9" />
+    <path d="M 75 22 Q 90 44 105 22 Z" fill="#D5B18D" opacity="0.9" />
+  </g>
+
+  <!-- Typography block below -->
+  <g transform="translate(400, 630)">
+    <line x1="-120" y1="0" x2="120" y2="0" stroke="url(#roseGoldGrad)" stroke-width="1" stroke-opacity="0.6" />
+    <polygon points="0,-4 -4,0 0,4 4,0" fill="#D5B18D" />
+
+    <text y="48" font-family="'Cinzel', 'Playfair Display', serif" font-size="28" font-weight="600" fill="#FAFAF8" text-anchor="middle" letter-spacing="0.15em">DRA. FABIANA BARBOSA</text>
+    <text y="80" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#E2C5C5" text-anchor="middle" letter-spacing="0.25em">ADVOGADA • OAB/RJ 253.847</text>
+    
+    <text y="125" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#A8B2C1" text-anchor="middle" letter-spacing="0.08em">Advocacia Estratégica • Gestão de Crise Jurídica</text>
+    <text y="148" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#666787" text-anchor="middle" letter-spacing="0.05em">Rio de Janeiro &amp; Região dos Lagos</text>
+  </g>
+
+  <!-- Upload / Placeholder Notice Badge -->
+  <g transform="translate(400, 870)">
+    <rect x="-170" y="-24" width="340" height="48" rx="24" fill="#0A1C2E" stroke="#E2C5C5" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="-135" cy="0" r="12" fill="#E2C5C5" fill-opacity="0.15" />
+    <path d="M -135 -4 L -135 4 M -139 0 L -131 0" stroke="#E2C5C5" stroke-width="1.5" stroke-linecap="round" />
+    <text x="10" y="5" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="12" font-weight="500" fill="#E2C5C5" text-anchor="middle" letter-spacing="0.04em">Espaço Reservado para Fotografia Oficial</text>
+  </g>
+</svg>
